@@ -115,6 +115,15 @@ The following patterns were observed among the clusters:
 | **Cluster 4** | **Niche Market for Average-Quality Products**: Buyers pay more for specific features, even with average reviews. |  
 
 ---
+## **How to Use**
+### **Prerequisites**
+1. Python 3.7+  
+2. Install required libraries:
+   ```bash
+   pip install numpy pandas scikit-learn matplotlib
+   ```
+
+---
 
 ## **Future Improvements**
 1. **Deep Learning Models**: Use advanced neural networks like ANN or RNN for capturing complex, non-linear relationships in the data.  
