@@ -61,7 +61,7 @@ dataset/
 - **Bar Plots**: Explored data distributions and relationships, observing:  
   - Product score affects quantity sold.  
   - Total amount per unit impacts quantity sold.  
-- **Sweetviz Analysis**: Comprehensive visual report of the dataset. [Link to Sweetviz HTML](#).  
+- **Sweetviz Analysis**: Comprehensive visual report of the dataset is stored in [**sales EDA.html**](./sales%20EDA.html).  
 
 ### **1. Correlation Analysis**
 - Generated a **Correlation Heatmap** to identify relationships between features.  
