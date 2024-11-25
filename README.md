@@ -49,11 +49,19 @@ dataset/
 - Applied MinMax Scaling to ensure numerical columns had values between 0 and 1.  
 
 ### **5. Categorical Encoding**
-- Encoded categorical variables using **Label Encoding** to prepare them for regression and clustering models.  
+- Encoded categorical variables using **Label Encoding** to prepare product category and subcategory for regression and clustering models.  
+
+### **6. Outlier Removal**
+- Visualized outliers using boxplots and removed them using the **IQR method** (values outside fences).  
 
 ---
 
 ## **Exploratory Data Analysis**
+
+- **Bar Plots**: Explored data distributions and relationships, observing:  
+  - Product score affects quantity sold.  
+  - Total amount per unit impacts quantity sold.  
+- **Sweetviz Analysis**: Comprehensive visual report of the dataset. [Link to Sweetviz HTML](#).  
 
 ### **1. Correlation Analysis**
 - Generated a **Correlation Heatmap** to identify relationships between features.  
@@ -72,7 +80,7 @@ dataset/
 ## **Model Building and Results**
 
 ### **Regression Models**
-The following regression models were tested using **5-Fold Cross Validation**:  
+The following regression models were tested using **5-Fold Cross Validation** after hyperparameter tuning:  
 
 | **Model**                  | **MSE**  | **R²**  | **RMSE** |  
 |----------------------------|----------|---------|----------|  
@@ -113,6 +121,28 @@ The following patterns were observed among the clusters:
 | **Cluster 2** | **Balanced Products for Value-Conscious Buyers**: Buyers seek good performance at reasonable costs. |  
 | **Cluster 3** | **Budget-Friendly Products with Average Ratings**: Buyers prioritize affordability while accepting basic functionality. |  
 | **Cluster 4** | **Niche Market for Average-Quality Products**: Buyers pay more for specific features, even with average reviews. |  
+
+## **Interpretation**
+**Cluster 0:**
+
+High-End Buyers with Moderate Product Rating: This cluster represents products with high product score 1 (51.31), slightly below average product score 2 (-1.20), and high total amount per unit (30.29). However, they have a moderate product rating (3.05). This suggests that buyers in this cluster prioritize high-quality products but are more forgiving of minor flaws. They might be willing to pay more for a product that meets their basic needs but may not be overly concerned with aesthetics or additional features.
+
+**Cluster 1:**
+
+Top-Rated Products with Moderate Spending: This cluster includes products with the highest product score 1 (97.50), slightly above average product score 2 (1.01), and a moderate total amount per unit (59.51). Additionally, they have the highest product rating (4.43). This indicates that buyers in this cluster prioritize both high-quality products and positive customer reviews. They are willing to spend more on products that are highly rated and offer excellent performance.
+
+**Cluster 2:**
+
+Balanced Products for Value-Conscious Buyers: This cluster consists of products with moderate product score 1 (56.35), slightly below average product score 2 (-0.86), and a moderate total amount per unit (33.06). Their product rating is also moderate (3.49). This suggests that buyers in this cluster value a balance between quality and price. They are looking for products that offer good performance at a reasonable cost.
+
+**Cluster 3:**
+
+Budget-Friendly Products with Average Rating: This cluster includes products with moderate product score 1 (52.38), the lowest product score 2 (-1.66), and the lowest total amount per unit (29.32). Their product rating is average (4.33). This suggests that buyers in this cluster prioritize affordability. They are looking for products that offer basic functionality at a low price point and may be less concerned with minor flaws or lack of advanced features.
+
+**Cluster 4:**
+
+Average-Quality Products for Niche Market: This cluster consists of products with slightly above average product score 1 (65.18), slightly above average product score 2 (0.42), and the highest total amount per unit (40.75). However, their product rating is the lowest (2.50). This suggests that buyers in this cluster prioritize specific features or cater to a niche market. They might be willing to pay more for a product that meets their unique needs, even if the overall quality or customer reviews are average.
+
 
 ---
 ## **How to Use**
