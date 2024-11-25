@@ -67,14 +67,15 @@ dataset/
 - Generated a **Correlation Heatmap** to identify relationships between features.  
 - Strong correlations were observed between:  
   - `Product Score 1` and `Base Price`.  
-  - `Product Score 2` and `Product Rating`.  
+  - `Product Score 2` and `Product Rating`.
+<img src="images/correlation.png" alt="heat map" width="500"/>  
 
 ### **2. Dimensionality Reduction**
 - **Principal Component Analysis (PCA)**:  
   - Merged correlated features into single components for better model performance:  
     - `Product Score 1` and `Base Price`.  
     - `Product Score 2` and `Product Rating`.  
-
+<img src="images/correlation1.png" alt="heat map after PCA" width="500"/>  
 ---
 
 ## **Model Building and Results**
@@ -108,7 +109,7 @@ The following regression models were tested using **5-Fold Cross Validation** af
 - Clustering was performed on transactions from the past 6 months using the following features:  
   - `Product Category`, `Product Subcategory`, `Product Score 1`, `Product Score 2`, `Total Amount Per Unit`, `Product Rating`.  
 - **Optimal K**: Determined using the **Elbow Method**, which identified **K=5** as the optimal number of clusters.  
-
+<img src="images/elbow.png" alt="optimal K selection" width="500"/>  
 ---
 
 ## **Cluster Insights**
@@ -123,6 +124,8 @@ The following patterns were observed among the clusters:
 | **Cluster 4** | **Niche Market for Average-Quality Products**: Buyers pay more for specific features, even with average reviews. |  
 
 ## **Interpretation**
+
+<img src="images/cluster.png" alt="cluster analysis" width="1000"/>  
 **Cluster 0:**
 
 High-End Buyers with Moderate Product Rating: This cluster represents products with high product score 1 (51.31), slightly below average product score 2 (-1.20), and high total amount per unit (30.29). However, they have a moderate product rating (3.05). This suggests that buyers in this cluster prioritize high-quality products but are more forgiving of minor flaws. They might be willing to pay more for a product that meets their basic needs but may not be overly concerned with aesthetics or additional features.
